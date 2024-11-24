@@ -24,7 +24,7 @@
   "dependencies": {
     "enocean-js": "0.0.1-beta.17",
     "events": "^3.0.0",
-    "serialport": "^10.4.0"
+    "serialport": "^9.2.8"
   },
   "devDependencies": {
     "coffeescript": "^2.4.1",

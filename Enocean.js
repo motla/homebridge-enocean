@@ -6,7 +6,7 @@
 
   ({EventEmitter} = require('events'));
 
-  SerialPort = require('serialport');
+  {SerialPort} = require('serialport');
 
   EnoceanJS = require('enocean-js');
 

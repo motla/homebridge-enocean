@@ -2,11 +2,11 @@
 (function() {
     // Copyright (c) 2019 Alexander Sporn. All rights reserved.
 
-  var Enocean, EnoceanJS, EventEmitter, SerialPort;
+  var Enocean, EnoceanJS, EventEmitter;
 
   ({EventEmitter} = require('events'));
 
-  {SerialPort} = require('serialport');
+  const {SerialPort} = require('serialport');
 
   EnoceanJS = require('enocean-js');
 
@@ -14,7 +14,8 @@
     constructor(options) {
       super();
       this.options = options;
-      this.port = new SerialPort(this.options.port, {
+      this.port = new SerialPort({
+        path: this.options.port,
         baudRate: 57600
       });
       this.parser = this.port.pipe(new EnoceanJS.ESP3Parser());
